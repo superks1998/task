@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "build:sass": "node-sass -r --output-style compressed assets/css/style.scss -o .",
+        "watch:sass": "npm run build:sass && npm run build:sass -- -w"
+    },
+    "dependencies": {
+        "node-sass": "^7.0.0",
+        "sass": "^1.45.0"
+    }
+}

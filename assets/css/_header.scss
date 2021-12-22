@@ -1,0 +1,85 @@
+.header {
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 20px;
+  }
+  &__logo {
+    color: white;
+    text-decoration: none;
+    &-img {
+      width: 32px;
+      vertical-align: -3px;
+    }
+
+    &-text {
+      font-size: 2.7rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-left: 5px;
+    }
+  }
+  &__menu {
+    margin-left: 105px;
+    margin-right: 10px;
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+    }
+    &-link {
+      font-size: 1.4rem;
+      color: $text-color;
+      text-transform: uppercase;
+      text-decoration: none;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    &-item {
+      display: inline-block;
+      color: $text-color;
+      padding: 7px 14px;
+      &.active {
+        border: 3px solid white;
+        .header__menu-link {
+          color: white;
+        }
+      }
+    }
+  }
+  &__action {
+    display: flex;
+    align-items: center;
+    &-item {
+      margin-left: 20px;
+      .cart-count {
+        position: relative;
+        top: -6px;
+        right: -15px;
+        display: inline-block;
+        font-family: $secondary-font;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        width: 24px;
+        height: 16px;
+        background-color: $primary-color;
+        font-size: 1.4rem;
+      }
+      .cart-count::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 24px;
+        border-width: 8px;
+        border-color: transparent $primary-color transparent transparent;
+        border-style: solid;
+      }
+    }
+    &-icon {
+      width: 22px;
+      color: $text-color;
+    }
+  }
+}
