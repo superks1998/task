@@ -392,8 +392,9 @@ html {
   margin-bottom: 160px;
 }
 
-.pricing__card.new {
+.pricing__card {
   position: relative;
+  top: 0;
 }
 
 .pricing__card.new::after {
@@ -410,22 +411,27 @@ html {
   text-align: center;
   background-color: #ffcd37;
   border-radius: 50%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.pricing__card.ultimate {
-  position: relative;
+.pricing__card:hover {
   top: -31px;
 }
 
-.pricing__card.ultimate .pricing__header-title {
+.pricing__card:hover .pricing__header-title {
   color: white;
 }
 
-.pricing__card.ultimate .pricing__header-price {
+.pricing__card:hover .pricing__header-price {
   padding-bottom: 15px;
 }
 
-.pricing__card.ultimate .pricing__featured {
+.pricing__card:hover .pricing__header-desc {
+  display: block;
+}
+
+.pricing__card:hover .pricing__featured {
   border-color: #393d50;
 }
 
@@ -443,6 +449,8 @@ html {
   padding-top: 45px;
   margin-bottom: 21px;
   margin-top: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .pricing__header-price {
@@ -452,6 +460,8 @@ html {
   color: #99a9b5;
   margin: 0;
   padding-bottom: 36px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .pricing__header-price span {
@@ -464,6 +474,9 @@ html {
   color: #556472;
   padding-bottom: 36px;
   margin: 0;
+  display: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 .pricing__featured {

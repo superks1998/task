@@ -24,8 +24,9 @@
     margin-bottom: 160px;
   }
   &__card {
+    position: relative;
+    top: 0;
     &.new {
-      position: relative;
       &::after {
         content: "NEW";
         position: absolute;
@@ -40,10 +41,10 @@
         text-align: center;
         background-color: #ffcd37;
         border-radius: 50%;
+        transition: 0.3s ease;
       }
     }
-    &.ultimate {
-      position: relative;
+    &:hover {
       top: -31px;
       .pricing__header {
         &-title {
@@ -51,6 +52,9 @@
         }
         &-price {
           padding-bottom: 15px;
+        }
+        &-desc {
+          display: block;
         }
       }
       .pricing__featured {
@@ -70,6 +74,7 @@
       padding-top: 45px;
       margin-bottom: 21px;
       margin-top: 0;
+      transition: 0.2s ease;
     }
     &-price {
       font-size: 2.4rem;
@@ -78,6 +83,8 @@
       color: #99a9b5;
       margin: 0;
       padding-bottom: 36px;
+      transition: 0.2s ease;
+
       span {
         color: white;
       }
@@ -88,6 +95,8 @@
       color: #556472;
       padding-bottom: 36px;
       margin: 0;
+      display: none;
+      transition: 0.3s all ease;
     }
   }
   &__featured {
